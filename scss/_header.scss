@@ -1,0 +1,31 @@
+.main_header{
+    background-color: #fff;
+    &__wrapper{
+        position: relative;
+        box-shadow: 0 0 10px #ccc;
+    }
+    &__branding{
+        width:auto;
+        display: block;
+        padding:20px 0 15px 0;
+    }
+    &__branding img{
+        height:auto;
+        width:165px;
+        margin:auto;
+    }
+    &__location{
+        padding:13px 0;
+        background-color: #eaeaea;
+        p{
+            max-width: calc(100% - 40px);
+            margin:auto;
+            text-align:center;
+            color:#353535;
+            font-weight: 500;
+            i {
+                margin-right:10px;
+            }
+        }
+    }
+}

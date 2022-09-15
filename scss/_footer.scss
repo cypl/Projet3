@@ -1,0 +1,38 @@
+.main_footer{
+    &__wrapper{
+        max-width: calc(100% - 40px);
+        padding:20px 0;
+        margin:auto;
+    }
+    &__logo{
+        width:100px;
+    }
+    &__list{
+        margin-top:20px;
+        &item{
+            color:#fff;
+            i {
+                margin-right:8px;
+            }
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .main_footer{
+        &__wrapper{
+        }
+        &__logo{
+            margin:auto;
+        }
+        &__list{
+            text-align: center;
+            &item{
+                display:inline-block;
+                margin:0 10px;
+            }
+            
+        }
+    }
+}

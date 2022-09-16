@@ -1,0 +1,91 @@
+.list_restaurants{
+    background-color:#f6f6f6;
+    &__wrapper{
+        padding:60px 0 40px 0;
+        @include containerWidth;
+    }
+    &__title{
+        @include titleSection;
+    }
+    &__container{
+        @include displayFlexContainer;
+    }
+}
+
+.restaurant{
+    margin-bottom:20px;
+    background-color:#fff;
+    border-radius:12px;
+    box-shadow:0 0 10px #ccc;
+    width: 100%;
+    &__img{
+        border-radius:12px 12px 0 0;
+        img{
+            border-radius:12px 12px 0 0;  
+        }
+        a {
+            border-radius:12px 12px 0 0; 
+        }
+    }
+    &__info{
+        padding:15px 80px 15px 20px;
+        position: relative;
+    }
+    &__name{
+        font-size:18px;
+        line-height:1.6;
+        font-weight:700;
+    }
+    &__location{
+        font-size:18px;
+        line-height:1.6;
+        font-weight:300;
+    }
+    &__like{
+        position: absolute;
+        right:0;
+        top:0;
+        width:80px;
+        height:100%;
+    }
+}
+.like{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height:auto;
+    top:50%;
+    margin-top:-13px;
+    right:25px;
+    cursor:pointer;
+    .like_plain {
+        fill:$grey;
+        transition:0.2s fill ease-in-out;
+    }
+    .like_outline {
+        fill:$primaryColor;
+        opacity:0;
+        transition:0.2s opacity ease-in-out;
+    }
+    &:hover .like_plain {
+        fill:$primaryColor;
+        transition:0.2s fill ease-in-out;
+        }
+    &:hover .like_outline {
+        opacity:1;
+        transition:0.2s opacity ease-in-out;
+        }
+    }
+
+ 
+
+@media only screen and (min-width: 768px) {
+    .list_restaurants{
+        &__wrapper{
+            @include containerWidthDesktop;
+        }
+    }
+    .restaurant{
+        width: calc(50% - 10px);
+    }
+}

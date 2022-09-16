@@ -18,10 +18,9 @@
         padding:13px 0;
         background-color: #eaeaea;
         p{
-            max-width: calc(100% - 40px);
-            margin:auto;
+            @include containerWidth;
             text-align:center;
-            color:#353535;
+            color:$grey;
             font-weight: 500;
             i {
                 margin-right:10px;

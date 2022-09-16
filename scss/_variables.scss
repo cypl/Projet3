@@ -1,1 +1,25 @@
-$colorred: red;
+$grey: #353535;
+$primaryColor:#9356DC;
+$secondaryColor:#FF79DA;
+$tertiaryColor:#99E2D0;
+
+
+@mixin containerWidth{
+    max-width: calc(100% - 40px);
+    margin:auto;
+}
+@mixin containerWidthDesktop{
+    width:90%;
+    max-width: 1100px;
+    margin:auto;
+}
+@mixin titleSection{
+    font-size:24px;
+    font-weight: 700;
+    margin-bottom:25px;
+}
+@mixin displayFlexContainer{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

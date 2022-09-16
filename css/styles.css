@@ -45,6 +45,22 @@ img {
   background-color: #fff;
 }
 
+.cta {
+  text-align: center;
+  line-height: 1;
+}
+.cta a {
+  display: inline-block;
+  color: #fff;
+  padding: 17px 22px;
+  background: rgb(255, 121, 218);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 121, 218)), to(rgb(147, 86, 220)));
+  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  border-radius: 30px;
+  -webkit-box-shadow: 0 5px 10px #ccc;
+          box-shadow: 0 5px 10px #ccc;
+}
+
 h1 {
   font-size: 21px;
   margin: 0;
@@ -80,8 +96,10 @@ li {
 p {
   font-size: 17px;
   margin: 0;
-  line-height: 1.58 p strong;
-  line-height-font-weight: 700;
+  line-height: 1.5;
+}
+p strong {
+  font-weight: 700;
 }
 
 .main_header {
@@ -117,6 +135,104 @@ p {
   margin-right: 10px;
 }
 
+.welcome_home__col__wrapper {
+  max-width: calc(100% - 40px);
+  margin: auto;
+}
+.welcome_home__col--start {
+  padding: 60px 0;
+  background: rgb(246, 246, 246);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(246, 246, 246)), to(rgb(255, 255, 255)));
+  background: linear-gradient(0deg, rgb(246, 246, 246) 0%, rgb(255, 255, 255) 100%);
+}
+.welcome_home__col--start * {
+  text-align: center;
+}
+.welcome_home__col--start .welcome_home__txt {
+  font-weight: 300;
+  font-size: 18px;
+}
+.welcome_home__col--start .welcome_home__btn {
+  margin-top: 35px;
+}
+.welcome_home__col--howto {
+  padding: 60px 0;
+}
+.welcome_home__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.welcome_home__howtoitem {
+  margin-bottom: 20px;
+  padding-left: 13px;
+}
+.welcome_home__howtoitem:last-child {
+  margin-bottom: 0;
+}
+.welcome_home__howtoitem__box {
+  display: block;
+  border-radius: 18px;
+  padding: 30px;
+  background-color: #f6f6f6;
+  font-weight: 700;
+  position: relative;
+  -webkit-box-shadow: 0 5px 15px #ccc;
+          box-shadow: 0 5px 15px #ccc;
+}
+.welcome_home__howtoitem__box__numb {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  left: -12px;
+  border-radius: 50%;
+}
+.welcome_home__howtoitem__box__numb span {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 400;
+  font-size: 14px;
+}
+.welcome_home__howtoitem__box i {
+  color: #7e7e7e;
+  margin-right: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome_home {
+    padding: 60px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+  }
+  .welcome_home__col__wrapper {
+    max-width: inherit;
+    margin: inherit;
+  }
+  .welcome_home__col--start {
+    width: calc(50% - 20px);
+    padding: 85px 20px 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #ededed;
+  }
+  .welcome_home__col--howto {
+    width: calc(50% - 20px);
+    padding: 0;
+  }
+}
 .list_restaurants {
   background-color: #f6f6f6;
 }
@@ -128,7 +244,7 @@ p {
 .list_restaurants__title {
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .list_restaurants__container {
   display: -webkit-box;

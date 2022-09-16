@@ -44,3 +44,16 @@ img {
 .content{
     background-color: #fff;
 }
+.cta{
+    text-align:center;
+    line-height:1;
+    a{
+        display:inline-block;
+        color:#fff;
+        padding:17px 22px;
+        background: rgb(255,121,218);
+        background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%); 
+        border-radius: 30px;
+        box-shadow: 0 5px 10px #ccc;
+    }
+}

@@ -2,6 +2,7 @@ $grey: #353535;
 $primaryColor:#9356DC;
 $secondaryColor:#FF79DA;
 $tertiaryColor:#99E2D0;
+$radius : 12px;
 
 
 @mixin containerWidth{
@@ -13,10 +14,15 @@ $tertiaryColor:#99E2D0;
     max-width: 1100px;
     margin:auto;
 }
+@mixin containerWidthInherit{
+    max-width: inherit;
+    margin:inherit;
+}
+
 @mixin titleSection{
     font-size:24px;
     font-weight: 700;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 @mixin displayFlexContainer{
     display:flex;

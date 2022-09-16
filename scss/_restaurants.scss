@@ -16,10 +16,10 @@
 .restaurant{
     margin-bottom:20px;
     background-color:#fff;
-    border-radius:12px;
+    border-radius:$radius;
     width: 100%;
     a {
-        border-radius:12px;
+        border-radius:$radius;
         box-shadow:0 0 10px #ccc;
         display:block;
         transition:0.2s box-shadow ease-in-out;
@@ -33,9 +33,9 @@
         }
     }
     &__img{
-        border-radius:12px 12px 0 0;
+        border-radius:$radius $radius 0 0;
         img{
-            border-radius:12px 12px 0 0;  
+            border-radius:$radius $radius 0 0;  
         }
     }
     &__info{

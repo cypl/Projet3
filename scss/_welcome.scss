@@ -1,0 +1,92 @@
+// Styles pour la section Welcome de la page d'accueil
+.welcome_home{
+    &__col{
+        &__wrapper{
+            @include containerWidth;
+        }
+        &--start{
+            padding:60px 0;
+            background: rgb(246,246,246);
+            background: linear-gradient(0deg, rgba(246,246,246,1) 0%, rgba(255,255,255,1) 100%);
+            * {
+                text-align:center;
+            } 
+            .welcome_home__txt{
+                font-weight:300;
+                font-size:18px;
+            }
+            .welcome_home__btn{
+                margin-top:35px;
+            }
+        }
+        &--howto{
+            padding:60px 0;
+        }
+    }
+    &__title{
+        @include titleSection;
+    }
+    &__howtoitem{
+        margin-bottom:20px;
+        padding-left:13px;
+        &:last-child{
+            margin-bottom:0;
+        }
+        &__box{
+            display:block;
+            border-radius: 18px;
+            padding:30px;
+            background-color:#f6f6f6;
+            font-weight: 700;
+            position: relative;
+            box-shadow: 0 5px 15px #ccc;
+            
+            &__numb{
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background-color: $primaryColor;
+                left:-12px;
+                border-radius: 50%;
+                span{
+                    color:#fff;
+                    position: absolute;
+                    left:50%;
+                    top:50%;
+                    transform:translate(-50%,-50%);
+                    font-weight: 400;
+                    font-size:14px;
+                }
+            }
+            i{
+                color:#7e7e7e;
+                margin-right:18px;
+            }
+            
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .welcome_home{
+        padding:60px 0;
+        @include displayFlexContainer;
+        @include containerWidthDesktop;
+        &__col{
+            &__wrapper{
+                @include containerWidthInherit;
+            }
+            &--start{
+                width:calc(50% - 20px);
+                padding:85px 20px 30px 20px;
+                border-radius:$radius;
+                border:1px solid #ededed;
+            }
+            &--howto{
+                width:calc(50% - 20px);
+                padding:0;
+            }
+        }
+    }
+}

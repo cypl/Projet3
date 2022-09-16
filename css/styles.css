@@ -145,17 +145,35 @@ p {
   margin-bottom: 20px;
   background-color: #fff;
   border-radius: 12px;
+  width: 100%;
+}
+.restaurant a {
+  border-radius: 12px;
   -webkit-box-shadow: 0 0 10px #ccc;
           box-shadow: 0 0 10px #ccc;
-  width: 100%;
+  display: block;
+  -webkit-transition: 0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.2s box-shadow ease-in-out;
+  transition: 0.2s box-shadow ease-in-out, 0.2s -webkit-box-shadow ease-in-out;
+}
+.restaurant a:hover {
+  -webkit-box-shadow: 0 0 20px #777;
+          box-shadow: 0 0 20px #777;
+  -webkit-transition: 0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.2s box-shadow ease-in-out;
+  transition: 0.2s box-shadow ease-in-out, 0.2s -webkit-box-shadow ease-in-out;
+}
+.restaurant a:hover .restaurant__name {
+  color: #9356DC;
+  -webkit-transition: 0.2s color ease-in-out;
+  transition: 0.2s color ease-in-out;
 }
 .restaurant__img {
   border-radius: 12px 12px 0 0;
 }
 .restaurant__img img {
-  border-radius: 12px 12px 0 0;
-}
-.restaurant__img a {
   border-radius: 12px 12px 0 0;
 }
 .restaurant__info {
@@ -166,6 +184,8 @@ p {
   font-size: 18px;
   line-height: 1.6;
   font-weight: 700;
+  -webkit-transition: 0.2s color ease-in-out;
+  transition: 0.2s color ease-in-out;
 }
 .restaurant__location {
   font-size: 18px;
@@ -214,12 +234,14 @@ p {
 
 @media only screen and (min-width: 768px) {
   .list_restaurants__wrapper {
+    padding: 60px 0 20px 0;
     width: 90%;
     max-width: 1100px;
     margin: auto;
   }
   .restaurant {
-    width: calc(50% - 10px);
+    margin-bottom: 40px;
+    width: calc(50% - 20px);
   }
 }
 .main_footer__wrapper {

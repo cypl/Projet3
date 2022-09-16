@@ -1,3 +1,4 @@
+// Styles pour la section qui présente la liste des restaurants
 .list_restaurants{
     background-color:#f6f6f6;
     &__wrapper{
@@ -16,15 +17,25 @@
     margin-bottom:20px;
     background-color:#fff;
     border-radius:12px;
-    box-shadow:0 0 10px #ccc;
     width: 100%;
+    a {
+        border-radius:12px;
+        box-shadow:0 0 10px #ccc;
+        display:block;
+        transition:0.2s box-shadow ease-in-out;
+        &:hover{
+            box-shadow:0 0 20px #777;
+            transition:0.2s box-shadow ease-in-out;
+        }
+        &:hover .restaurant__name{
+            color:$primaryColor;
+            transition:0.2s color ease-in-out;
+        }
+    }
     &__img{
         border-radius:12px 12px 0 0;
         img{
             border-radius:12px 12px 0 0;  
-        }
-        a {
-            border-radius:12px 12px 0 0; 
         }
     }
     &__info{
@@ -35,6 +46,7 @@
         font-size:18px;
         line-height:1.6;
         font-weight:700;
+        transition:0.2s color ease-in-out;
     }
     &__location{
         font-size:18px;
@@ -82,10 +94,12 @@
 @media only screen and (min-width: 768px) {
     .list_restaurants{
         &__wrapper{
+            padding:60px 0 20px 0;
             @include containerWidthDesktop;
         }
     }
     .restaurant{
-        width: calc(50% - 10px);
+        margin-bottom:40px;
+        width: calc(50% - 20px);
     }
 }

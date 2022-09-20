@@ -1,10 +1,23 @@
+// Variables
 $grey: #353535;
 $primaryColor:#9356DC;
 $secondaryColor:#FF79DA;
 $tertiaryColor:#99E2D0;
 $radius : 12px;
+$tspeed : 0.15s;
 
+// Functions
+@function lightness-up($color){
+    @return lighten($color, 35%);
+    }
+@function lightness-down($color){
+    @return darken($color, 45%);
+    }
+@function color-rgb($color){
+    @return rgba($color);
+    }
 
+// Mixins
 @mixin containerWidth{
     max-width: calc(100% - 40px);
     margin:auto;
@@ -18,7 +31,6 @@ $radius : 12px;
     max-width: inherit;
     margin:inherit;
 }
-
 @mixin titleSection{
     font-size:24px;
     font-weight: 700;

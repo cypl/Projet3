@@ -22,18 +22,19 @@
         border-radius:$radius;
         box-shadow:0 0 10px #ccc;
         display:block;
-        transition:0.2s box-shadow ease-in-out;
+        transition:$tspeed box-shadow ease-in-out;
         &:hover{
             box-shadow:0 0 20px #777;
-            transition:0.2s box-shadow ease-in-out;
+            transition:$tspeed box-shadow ease-in-out;
         }
         &:hover .restaurant__name{
             color:$primaryColor;
-            transition:0.2s color ease-in-out;
+            transition:$tspeed color ease-in-out;
         }
     }
     &__img{
         border-radius:$radius $radius 0 0;
+        position: relative;
         img{
             border-radius:$radius $radius 0 0;  
         }
@@ -46,7 +47,7 @@
         font-size:18px;
         line-height:1.6;
         font-weight:700;
-        transition:0.2s color ease-in-out;
+        transition:$tspeed color ease-in-out;
     }
     &__location{
         font-size:18px;
@@ -60,6 +61,19 @@
         width:80px;
         height:100%;
     }
+    &--new .restaurant__img:before{
+        content:"Nouveau";
+        position: absolute;
+        padding: 10px 12px;
+        color:lightness-down($tertiaryColor);
+        background-color:$tertiaryColor;
+        right:12px;
+        top:12px;
+        line-height: 1;
+        font-size: 14px;
+        border-radius: 3px;
+        font-weight:700;
+    }
 }
 .like{
     display: block;
@@ -71,25 +85,20 @@
     right:25px;
     cursor:pointer;
     .like_plain {
-        fill:$grey;
-        transition:0.2s fill ease-in-out;
+        fill:url(#like-gradient);
+        opacity:0;
+        transition:$tspeed opacity ease-in-out;
     }
     .like_outline {
-        fill:$primaryColor;
-        opacity:0;
-        transition:0.2s opacity ease-in-out;
-    }
-    &:hover .like_plain {
-        fill:$primaryColor;
-        transition:0.2s fill ease-in-out;
-        }
-    &:hover .like_outline {
+        fill:$grey;
         opacity:1;
-        transition:0.2s opacity ease-in-out;
-        }
+    }
+    &:hover .like_plain{
+        opacity:1;
+        transition:$tspeed opacity ease-in-out;
+    }
     }
 
- 
 
 @media only screen and (min-width: 768px) {
     .list_restaurants{

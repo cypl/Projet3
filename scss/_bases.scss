@@ -37,7 +37,6 @@ figure {
 img {
     width: 100%;
     height: auto;
-    vertical-align: middle;
     display: block;
 }
 
@@ -52,7 +51,7 @@ img {
         color:#fff;
         padding:17px 22px;
         background: rgba($primaryColor,1);
-        background: linear-gradient(180deg, rgba($secondaryColor,1) 0%, rgba($primaryColor,1) 100%); 
+        background: linear-gradient(180deg, $secondaryColor 0%, $primaryColor 100%); 
         border-radius: 30px;
         box-shadow: 0 5px 10px #ccc;
     }

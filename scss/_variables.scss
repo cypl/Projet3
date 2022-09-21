@@ -13,9 +13,6 @@ $tspeed : 0.15s;
 @function lightness-down($color){
     @return darken($color, 45%);
     }
-@function color-rgb($color){
-    @return rgba($color);
-    }
 
 // Mixins
 @mixin containerWidth{

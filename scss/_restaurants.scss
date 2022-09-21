@@ -92,6 +92,11 @@
     .like_outline {
         fill:$grey;
         opacity:1;
+        transition:$tspeed opacity ease-in-out;
+    }
+    &:hover .like_outline{
+        opacity:0;
+        transition:$tspeed opacity ease-in-out;
     }
     &:hover .like_plain{
         opacity:1;

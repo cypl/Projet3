@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ohmyfood</title>
+        <!-- Bloquer la possibilité de zoomer dans le viewport (mobile / tablette) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bloquer la détection du téléphone, pour éviter les styles ajouter automatiquement par la machine -->
+        <meta name="format-detection" content="telephone=no">
+        <!-- Bloquer l'indexation du site par les robots, étant donné qu'il est en ligne -->
+        <meta name="robots" content="noindex, nofollow" />
+        <!-- Importation des feuilles de style -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="css/styles.min.css">
+    </head>
+    <body>
+        <!-- Header principal du site -->
+        <header class="main_header">
+            <div class="main_header__wrapper">
+                <figure class="main_header__branding">
+                    <a href="index.html">
+                        <img src="./images/logo_ohmyfood.png" alt="Logo Ohmyfood">
+                    </a>
+                </figure>
+            </div>
+        </header>
+        <!-- Conteneur principal du site -->
+        <main class="content">
+            <section class="head_restaurant"></section>
+            <section class="menu_restaurant">
+                <div class="menu_restaurant__wrapper">
+                    <article class="menu_restaurant__group">
+                        <h3 class="menu_restaurant__group_title">Entrées</h3>
+                        <form>
+                            <label>
+                                <input type="radio" name="Entrées" value="">
+                                <h3>Titre de l'entrée 1</h3>
+                                <p>Nom de l'entrée 1</p>
+                                <p>Prix</p>
+                            </label>
+                            <label>
+                                <input type="radio" name="Entrées" value="">
+                                <h3>Titre de l'entrée 2</h3>
+                                <p>Nom de l'entrée 2</p>
+                                <p>Prix</p>
+                            </label>
+                            <label>
+                                <input type="radio" name="Entrées" value="">
+                                <h3>Titre de l'entrée 3</h3>
+                                <p>Nom de l'entrée 3</p>
+                                <p>Prix</p>
+                            </label>
+                        </form>
+                    </article>
+                    <article class="menu_restaurant__group">
+                        <h3 class="menu_restaurant__group_title">Plats</h3>
+                    </article>
+                    <article class="menu_restaurant__group">
+                        <h3 class="menu_restaurant__group_title">Desserts</h3>
+                    </article>
+                </div>
+                <p class="cta"><a href="#">Commander</a></p>
+            </section>
+        </main>
+        <footer class="main_footer">
+            <div class="main_footer__wrapper">
+                <figure class="main_footer__logo">
+                    <a href="index.html">
+                        <img src="./images/logo_ohmyfood_footer.png" alt="Logo Ohmyfood">
+                    </a>
+                </figure>
+                <ul class="main_footer__list">
+                    <li class="main_footer__listitem"><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                    <li class="main_footer__listitem"><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                    <li class="main_footer__listitem"><a href="#">Mentions légales</a></li>
+                    <li class="main_footer__listitem"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

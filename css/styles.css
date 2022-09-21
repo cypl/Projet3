@@ -37,7 +37,6 @@ figure {
 img {
   width: 100%;
   height: auto;
-  vertical-align: middle;
   display: block;
 }
 
@@ -54,8 +53,8 @@ img {
   color: #fff;
   padding: 17px 22px;
   background: #9356dc;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   border-radius: 30px;
   -webkit-box-shadow: 0 5px 10px #ccc;
           box-shadow: 0 5px 10px #ccc;
@@ -374,6 +373,13 @@ p strong {
 .like .like_outline {
   fill: #353535;
   opacity: 1;
+  -webkit-transition: 0.15s opacity ease-in-out;
+  transition: 0.15s opacity ease-in-out;
+}
+.like:hover .like_outline {
+  opacity: 0;
+  -webkit-transition: 0.15s opacity ease-in-out;
+  transition: 0.15s opacity ease-in-out;
 }
 .like:hover .like_plain {
   opacity: 1;
@@ -393,6 +399,10 @@ p strong {
     width: calc(50% - 20px);
   }
 }
+.menu_restaurant {
+  padding: 60px 0;
+}
+
 .main_footer__wrapper {
   padding: 30px 0;
   max-width: calc(100% - 40px);

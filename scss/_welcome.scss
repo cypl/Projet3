@@ -39,7 +39,7 @@
             background-color:#f6f6f6;
             font-weight: 700;
             position: relative;
-            box-shadow: 0 5px 15px #ccc;
+            @include boxShadow;
             transition:$tspeed background-color ease-in-out;
             cursor:pointer;
             &__numb{

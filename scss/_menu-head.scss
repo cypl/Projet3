@@ -1,0 +1,53 @@
+.head_restaurant{
+    background-color:$light;
+    &__wrapper{
+        position: relative;
+        &__img{
+            padding-top:75%;
+            position: relative;
+            img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top:0;
+                left:0;
+                object-fit:cover;
+            }
+        }
+        &__title{
+            background-color:$light;
+            padding-top:40px;
+            border-radius:40px 40px 0 0;
+            position: absolute;
+            width: 100%;
+            bottom:-7px;
+            &__w{
+                @include containerWidth;
+            }
+        }
+    }
+}
+
+
+// Vue tablette
+@media only screen and (min-width: 768px) {
+    .head_restaurant{
+        padding-top:60px;
+        &__wrapper{
+            max-width:600px;
+            margin:auto;
+            // outline:1px solid red;
+            &__img{
+                padding-top:56.25%;
+                border-radius: $radius;
+                img{
+                    border-radius: $radius;
+                }
+            }
+            &__title{
+                width:calc(100% - 80px);
+                left:40px;
+            }
+        }
+    }
+}

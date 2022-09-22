@@ -1,3 +1,142 @@
 .menu_restaurant{
-    padding:60px 0;
+    padding:40px 0 60px 0;
+    background-color:$light;
+    &__wrapper{
+        @include containerWidth;
+    }
+    &__group{
+        margin-bottom:40px;
+        &__title{
+            margin-bottom:15px;
+            font-size:16px;
+            line-height:1;
+            font-weight:300;
+            text-transform:uppercase;
+            &::after{
+                content:"";
+                display:block;
+                width:40px;
+                height:3px;
+                background-color: $tertiaryColor;
+                margin-top:10px;
+            }
+        }
+    }
+    &__box{
+        background-color:#fff;
+        @include boxShadow;
+        border-radius:$radius;
+        padding:15px 12px;
+        margin-bottom: 20px;
+        display: block;
+        cursor:pointer;
+        position: relative;
+        &:last-child{
+            margin-bottom:0;
+        }
+        &__content{
+            width:100%;
+            //conteneur qui change de largeur au survol de la box
+            &__plate{
+                width:100%;
+                transition: $tspeed width ease-in-out;
+                font-size:18px;
+                font-weight: 700;
+                overflow:hidden; 
+                white-space:nowrap; 
+                text-overflow: ellipsis;
+            }
+            //conteneur qui change de largeur au survol de la box
+            &__infos{
+                width:100%;
+                transition: $tspeed width ease-in-out;
+                display:flex;
+                justify-content:space-between;
+                &__desc{
+                    font-size:15px;
+                    overflow:hidden; 
+                    white-space:nowrap; 
+                    text-overflow: ellipsis;
+                }
+                &__price{
+                    font-size:15px;
+                    font-weight: 700;
+                }
+            }
+        }
+        // On masque la checkbox
+        &__check{
+            display:none;
+        }
+        &__checked{
+            height: 100%;
+            width: 0px;
+            background-color:$tertiaryColor;
+            border-radius: 0 $radius $radius 0;
+            right: 0;
+            position: absolute;
+            top: 0;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            transition: $tspeed width ease-in-out;
+            i{
+                color:#fff;
+                font-size:25px;
+                opacity:0;
+            }
+        }
+        // Styles et animations au survol de la box
+        &:hover{
+            .menu_restaurant__box__content__plate{
+                width:calc(100% - 65px);
+                transition: $tspeed width ease-in-out;
+            }
+            .menu_restaurant__box__content__infos{
+                width:calc(100% - 65px);
+                transition: $tspeed width ease-in-out;
+            }
+            .menu_restaurant__box__checked{
+                width:60px;
+                transition: $tspeed width ease-in-out;
+                i {
+                    opacity:1;
+                }
+            }
+            
+        }
+        
+    } 
+}
+
+// Vue tablette
+@media only screen and (min-width: 768px) {
+    .menu_restaurant{
+        padding-top:60px;
+        &__wrapper{
+            @include containerWidthDesktop;
+            @include displayFlexContainer;
+            justify-content:center;
+        }
+        &__group{
+            width:calc(50% - 30px);
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+}
+// Vue desktop large 3 colonnes
+@media only screen and (min-width: 1200px) {
+    .menu_restaurant{
+        padding-top:60px;
+        &__wrapper{
+            @include containerWidthDesktop;
+            @include displayFlexContainer;
+        }
+        &__group{
+            width:calc(33.33% - 20px);
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
 }

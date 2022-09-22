@@ -1,5 +1,6 @@
 // Variables
 $grey: #353535;
+$light: #f6f6f6;
 $primaryColor:#9356DC;
 $secondaryColor:#FF79DA;
 $tertiaryColor:#99E2D0;
@@ -37,4 +38,7 @@ $tspeed : 0.15s;
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+@mixin boxShadow{
+    box-shadow: 0 5px 15px #ccc;
 }

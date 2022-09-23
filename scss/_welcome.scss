@@ -6,8 +6,8 @@
         }
         &--start{
             padding:60px 0;
-            background: rgb(246,246,246);
-            background: linear-gradient(0deg, rgba(246,246,246,1) 0%, rgba(255,255,255,1) 100%);
+            background: $light;
+            background: linear-gradient(0deg, $light 0%, #fff 100%);
             * {
                 text-align:center;
             } 
@@ -36,7 +36,7 @@
             display:block;
             border-radius: 18px;
             padding:30px;
-            background-color:#f6f6f6;
+            background-color:$light;
             font-weight: 700;
             position: relative;
             @include boxShadow;
@@ -78,7 +78,7 @@
 }
 
 
-
+// Vue tablette et desktop
 @media only screen and (min-width: 768px) {
     .welcome_home{
         padding:60px 0;

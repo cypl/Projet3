@@ -1,6 +1,6 @@
 // Styles pour la section qui présente la liste des restaurants
 .list_restaurants{
-    background-color:#f6f6f6;
+    background-color:$light;
     &__wrapper{
         padding:60px 0 40px 0;
         @include containerWidth;
@@ -35,8 +35,13 @@
     &__img{
         border-radius:$radius $radius 0 0;
         position: relative;
+        padding-top:53%;
         img{
-            border-radius:$radius $radius 0 0;  
+            border-radius:$radius $radius 0 0;
+            position: absolute;
+            top: 0;
+            object-fit: cover;
+            height: 100%;  
         }
     }
     &__info{
@@ -73,6 +78,7 @@
         font-size: 14px;
         border-radius: 3px;
         font-weight:700;
+        z-index: 1;
     }
 }
 .like{
@@ -90,7 +96,7 @@
         transition:$tspeed opacity ease-in-out;
     }
     .like_outline {
-        fill:$grey;
+        fill:#000;
         opacity:1;
         transition:$tspeed opacity ease-in-out;
     }

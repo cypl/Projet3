@@ -6,6 +6,7 @@
     }
     &__group{
         margin-bottom:40px;
+        display:block;
         &__title{
             margin-bottom:15px;
             font-size:16px;
@@ -36,8 +37,10 @@
         }
         &__content{
             width:100%;
+            display: block;
             //conteneur qui change de largeur au survol de la box
             &__plate{
+                display: block;
                 width:100%;
                 transition: $tspeed width ease-in-out;
                 font-size:18px;
@@ -45,6 +48,7 @@
                 overflow:hidden; 
                 white-space:nowrap; 
                 text-overflow: ellipsis;
+                margin-bottom:5px;
             }
             //conteneur qui change de largeur au survol de la box
             &__infos{
@@ -53,12 +57,14 @@
                 display:flex;
                 justify-content:space-between;
                 &__desc{
+                    display: block;
                     font-size:15px;
                     overflow:hidden; 
                     white-space:nowrap; 
                     text-overflow: ellipsis;
                 }
                 &__price{
+                    display: block;
                     font-size:15px;
                     font-weight: 700;
                     padding-left:5px;

@@ -586,6 +586,7 @@ p strong {
 }
 .menu_restaurant__group {
   margin-bottom: 40px;
+  display: block;
 }
 .menu_restaurant__group__title {
   margin-bottom: 15px;
@@ -618,8 +619,10 @@ p strong {
 }
 .menu_restaurant__box__content {
   width: 100%;
+  display: block;
 }
 .menu_restaurant__box__content__plate {
+  display: block;
   width: 100%;
   -webkit-transition: 0.2s width ease-in-out;
   transition: 0.2s width ease-in-out;
@@ -628,6 +631,7 @@ p strong {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  margin-bottom: 5px;
 }
 .menu_restaurant__box__content__infos {
   width: 100%;
@@ -641,12 +645,14 @@ p strong {
           justify-content: space-between;
 }
 .menu_restaurant__box__content__infos__desc {
+  display: block;
   font-size: 15px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .menu_restaurant__box__content__infos__price {
+  display: block;
   font-size: 15px;
   font-weight: 700;
   padding-left: 5px;

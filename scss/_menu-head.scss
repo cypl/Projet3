@@ -1,5 +1,6 @@
 .head_restaurant{
     background-color:$light;
+    padding-bottom:40px;
     &__wrapper{
         position: relative;
         &__img{
@@ -68,7 +69,7 @@
 }
 @media only screen and (min-width: 768px) {
     .head_restaurant{
-        padding-top:60px;
+        padding-bottom:60px;
         &__wrapper{
             max-width:600px;
             margin:auto;

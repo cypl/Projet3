@@ -217,6 +217,7 @@ p strong {
 }
 .head_restaurant {
   background-color: #f6f6f6;
+  padding-bottom: 40px;
 }
 .head_restaurant__wrapper {
   position: relative;
@@ -279,7 +280,7 @@ p strong {
 }
 @media only screen and (min-width: 768px) {
   .head_restaurant {
-    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .head_restaurant__wrapper {
     max-width: 600px;
@@ -577,7 +578,7 @@ p strong {
   }
 }
 .menu_restaurant {
-  padding: 40px 0 60px 0;
+  padding-bottom: 60px;
   background-color: #f6f6f6;
 }
 .menu_restaurant__wrapper {

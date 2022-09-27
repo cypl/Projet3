@@ -42,7 +42,7 @@
             &__plate{
                 display: block;
                 width:100%;
-                transition: $tspeed width ease-in-out;
+                transition: $tspeedCheckbox width $tEaseCheckbox;
                 font-size:18px;
                 font-weight: 700;
                 overflow:hidden; 
@@ -53,7 +53,7 @@
             //conteneur qui change de largeur au survol de la box
             &__infos{
                 width:100%;
-                transition: $tspeed width ease-in-out;
+                transition: $tspeedCheckbox width $tEaseCheckbox;
                 display:flex;
                 justify-content:space-between;
                 &__desc{
@@ -86,32 +86,34 @@
             justify-content:center;
             align-items: center;
             width: 0px;
-            transition: $tspeed width ease-in-out;
+            transition: $tspeedCheckbox width $tEaseCheckbox;
             i{
                 color:#fff;
                 font-size:25px;
-                transform:rotate(-180deg);
+                transform:rotate(-360deg);
                 opacity:0;
-                transition: 0.3s transform ease-in-out, 0.15s opacity ease-in-out;
+                transition: 0.3s transform $tEaseCheckboxIcon, 0.15s opacity $tEaseCheckboxIcon;
+                transition-delay: 0ms, 100ms;
             }
         }
         // Styles et animations au survol de la box
         &:hover{
             .menu_restaurant__box__content__plate{
                 width:calc(100% - 65px);
-                transition: $tspeed width ease-in-out;
+                transition: $tspeedCheckbox width $tEaseCheckbox;
             }
             .menu_restaurant__box__content__infos{
                 width:calc(100% - 65px);
-                transition: $tspeed width ease-in-out;
+                transition: $tspeedCheckbox width $tEaseCheckbox;
             }
             .menu_restaurant__box__checked{
                 width:60px;
-                transition: $tspeed width ease-in-out;
+                transition: $tspeedCheckbox width $tEaseCheckbox;
                 i {
-                    transform:rotate(1deg);
+                    transform:rotate(0deg);
                     opacity:1;
-                    transition: 0.3s transform ease-in-out, 0.15s opacity ease-in-out;
+                    transition: 0.3s transform $tEaseCheckboxIcon, 0.15s opacity $tEaseCheckboxIcon;
+                    transition-delay: 300ms, 200ms;
                 }
             }
             

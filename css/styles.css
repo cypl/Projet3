@@ -56,8 +56,8 @@ img {
   -webkit-box-shadow: 0 5px 10px #ccc;
           box-shadow: 0 5px 10px #ccc;
   background-color: #9356DC;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(rgba(255, 255, 255, 0)));
-  background-image: linear-gradient(#FF79DA, rgba(255, 255, 255, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
   position: relative;
   z-index: 100;
   -webkit-transition: 0.2s -webkit-box-shadow ease-in-out;
@@ -74,9 +74,9 @@ img {
   border-radius: inherit;
   top: 0;
   left: 0;
-  background-color: #9b63df;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(rgba(255, 255, 255, 0)));
-  background-image: linear-gradient(#ff93e1, rgba(255, 255, 255, 0));
+  background-color: #a16be0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
+  background-image: linear-gradient(#ff93e1, #a16be0);
   opacity: 0;
   z-index: -100;
   -webkit-transition: 0.2s opacity ease-in-out, 0.2s background-color ease-in-out;
@@ -625,8 +625,8 @@ p strong {
 .menu_restaurant__box__content__plate {
   display: block;
   width: 100%;
-  -webkit-transition: 0.2s width ease-in-out;
-  transition: 0.2s width ease-in-out;
+  -webkit-transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
   font-size: 18px;
   font-weight: 700;
   overflow: hidden;
@@ -636,8 +636,8 @@ p strong {
 }
 .menu_restaurant__box__content__infos {
   width: 100%;
-  -webkit-transition: 0.2s width ease-in-out;
-  transition: 0.2s width ease-in-out;
+  -webkit-transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -678,43 +678,47 @@ p strong {
       -ms-flex-align: center;
           align-items: center;
   width: 0px;
-  -webkit-transition: 0.2s width ease-in-out;
-  transition: 0.2s width ease-in-out;
+  -webkit-transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
 }
 .menu_restaurant__box__checked i {
   color: #fff;
   font-size: 25px;
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
   opacity: 0;
   -webkit-transition: 0.15s opacity ease-in-out, 0.3s -webkit-transform ease-in-out;
   transition: 0.15s opacity ease-in-out, 0.3s -webkit-transform ease-in-out;
   transition: 0.3s transform ease-in-out, 0.15s opacity ease-in-out;
   transition: 0.3s transform ease-in-out, 0.15s opacity ease-in-out, 0.3s -webkit-transform ease-in-out;
+  -webkit-transition-delay: 0ms, 100ms;
+          transition-delay: 0ms, 100ms;
 }
 .menu_restaurant__box:hover .menu_restaurant__box__content__plate {
   width: calc(100% - 65px);
-  -webkit-transition: 0.2s width ease-in-out;
-  transition: 0.2s width ease-in-out;
+  -webkit-transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
 }
 .menu_restaurant__box:hover .menu_restaurant__box__content__infos {
   width: calc(100% - 65px);
-  -webkit-transition: 0.2s width ease-in-out;
-  transition: 0.2s width ease-in-out;
+  -webkit-transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
 }
 .menu_restaurant__box:hover .menu_restaurant__box__checked {
   width: 60px;
-  -webkit-transition: 0.2s width ease-in-out;
-  transition: 0.2s width ease-in-out;
+  -webkit-transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
 }
 .menu_restaurant__box:hover .menu_restaurant__box__checked i {
-  -webkit-transform: rotate(1deg);
-          transform: rotate(1deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
   opacity: 1;
   -webkit-transition: 0.15s opacity ease-in-out, 0.3s -webkit-transform ease-in-out;
   transition: 0.15s opacity ease-in-out, 0.3s -webkit-transform ease-in-out;
   transition: 0.3s transform ease-in-out, 0.15s opacity ease-in-out;
   transition: 0.3s transform ease-in-out, 0.15s opacity ease-in-out, 0.3s -webkit-transform ease-in-out;
+  -webkit-transition-delay: 300ms, 200ms;
+          transition-delay: 300ms, 200ms;
 }
 
 @media only screen and (min-width: 768px) {

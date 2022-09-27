@@ -54,7 +54,7 @@ img {
         border-radius: 30px;
         box-shadow: 0 5px 10px #ccc;
         background-color: $primaryColor;
-        background-image: linear-gradient( $secondaryColor, rgba(255,255,255,0));
+        background-image: linear-gradient( $secondaryColor, $primaryColor);
         position: relative;
         z-index:100;
         transition: $tspeed box-shadow ease-in-out;
@@ -67,8 +67,8 @@ img {
             border-radius: inherit;
             top: 0; 
             left: 0;
-            background-color: lighten($primaryColor,3%);
-            background-image: linear-gradient( lighten($secondaryColor,5%), rgba(255,255,255,0));
+            background-color: lighten($primaryColor,5%);
+            background-image: linear-gradient( lighten($secondaryColor,5%), lighten($primaryColor,5%));
             opacity: 0;
             z-index: -100;
             transition: $tspeed opacity ease-in-out, $tspeed background-color ease-in-out;

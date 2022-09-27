@@ -6,6 +6,10 @@ $secondaryColor:#FF79DA;
 $tertiaryColor:#99E2D0;
 $radius : 12px;
 $tspeed : 0.2s;
+//Checkbox
+$tspeedCheckbox : 0.4s;
+$tEaseCheckbox : cubic-bezier(.64,-0.45,.35,1.38);
+$tEaseCheckboxIcon : ease-in-out;
 
 // Functions
 @function lightness-up($color){

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Import de la Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 /* Styles de base */
@@ -138,6 +139,27 @@ p strong {
   font-weight: 700;
 }
 
+@-webkit-keyframes loaderFadeOut {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes loaderFadeOut {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
 .loader {
   position: fixed;
   z-index: 1;
@@ -145,8 +167,30 @@ p strong {
   height: 100%;
   background-color: #fff;
   top: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s; /* durée de l'animation */
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out; /* type de easing */
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s; /* durée avant le déclenchement */
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
+  -webkit-animation-name: loaderFadeOut;
+          animation-name: loaderFadeOut; /* appel keyframes */
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
+}
+.loader__svg {
+  display: block;
+  max-width: 30%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -15%;
+  margin-top: -10%;
 }
 
 .main_header {

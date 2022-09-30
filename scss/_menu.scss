@@ -32,6 +32,7 @@
         display: block;
         cursor:pointer;
         position: relative;
+        overflow:hidden;
         &:last-child{
             margin-bottom:0;
         }

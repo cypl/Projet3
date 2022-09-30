@@ -53,31 +53,28 @@ img {
         padding:17px 22px;
         border-radius: 30px;
         box-shadow: 0 5px 10px #ccc;
-        background-color: $primaryColor;
-        background-image: linear-gradient( $secondaryColor, $primaryColor);
+        background: linear-gradient( $secondaryColor, $primaryColor);
         position: relative;
+        overflow:hidden;
         z-index:100;
         transition: $tspeed box-shadow ease-in-out;
-        &:before{
+        &:after{
             content: '';
             position: absolute;
             display: block;
             height: 100%;
             width: 100%;
-            border-radius: inherit;
             top: 0; 
             left: 0;
-            background-color: lighten($primaryColor,5%);
-            background-image: linear-gradient( lighten($secondaryColor,5%), lighten($primaryColor,5%));
+            background: linear-gradient( lighten($secondaryColor,5%), lighten($primaryColor,5%));
             opacity: 0;
             z-index: -100;
             transition: $tspeed opacity ease-in-out, $tspeed background-color ease-in-out;
         }
         &:hover{
-            background-color: lighten($primaryColor,3%);
             box-shadow: 0 5px 10px #aaa;
             transition: $tspeed box-shadow ease-in-out;
-            &:before {
+            &:after {
                 opacity: 1;
                 transition: $tspeed opacity ease-in-out, $tspeed background-color ease-in-out;
             }

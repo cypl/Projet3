@@ -56,46 +56,43 @@ img {
   border-radius: 30px;
   -webkit-box-shadow: 0 5px 10px #ccc;
           box-shadow: 0 5px 10px #ccc;
-  background-color: #9356DC;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
   position: relative;
+  overflow: hidden;
   z-index: 100;
-  -webkit-transition: 0.2s -webkit-box-shadow ease-in-out;
-  transition: 0.2s -webkit-box-shadow ease-in-out;
-  transition: 0.2s box-shadow ease-in-out;
-  transition: 0.2s box-shadow ease-in-out, 0.2s -webkit-box-shadow ease-in-out;
+  -webkit-transition: 0.25s -webkit-box-shadow ease-in-out;
+  transition: 0.25s -webkit-box-shadow ease-in-out;
+  transition: 0.25s box-shadow ease-in-out;
+  transition: 0.25s box-shadow ease-in-out, 0.25s -webkit-box-shadow ease-in-out;
 }
-.cta a:before {
+.cta a:after {
   content: "";
   position: absolute;
   display: block;
   height: 100%;
   width: 100%;
-  border-radius: inherit;
   top: 0;
   left: 0;
-  background-color: #a16be0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
-  background-image: linear-gradient(#ff93e1, #a16be0);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
+  background: linear-gradient(#ff93e1, #a16be0);
   opacity: 0;
   z-index: -100;
-  -webkit-transition: 0.2s opacity ease-in-out, 0.2s background-color ease-in-out;
-  transition: 0.2s opacity ease-in-out, 0.2s background-color ease-in-out;
+  -webkit-transition: 0.25s opacity ease-in-out, 0.25s background-color ease-in-out;
+  transition: 0.25s opacity ease-in-out, 0.25s background-color ease-in-out;
 }
 .cta a:hover {
-  background-color: #9b63df;
   -webkit-box-shadow: 0 5px 10px #aaa;
           box-shadow: 0 5px 10px #aaa;
-  -webkit-transition: 0.2s -webkit-box-shadow ease-in-out;
-  transition: 0.2s -webkit-box-shadow ease-in-out;
-  transition: 0.2s box-shadow ease-in-out;
-  transition: 0.2s box-shadow ease-in-out, 0.2s -webkit-box-shadow ease-in-out;
+  -webkit-transition: 0.25s -webkit-box-shadow ease-in-out;
+  transition: 0.25s -webkit-box-shadow ease-in-out;
+  transition: 0.25s box-shadow ease-in-out;
+  transition: 0.25s box-shadow ease-in-out, 0.25s -webkit-box-shadow ease-in-out;
 }
-.cta a:hover:before {
+.cta a:hover:after {
   opacity: 1;
-  -webkit-transition: 0.2s opacity ease-in-out, 0.2s background-color ease-in-out;
-  transition: 0.2s opacity ease-in-out, 0.2s background-color ease-in-out;
+  -webkit-transition: 0.25s opacity ease-in-out, 0.25s background-color ease-in-out;
+  transition: 0.25s opacity ease-in-out, 0.25s background-color ease-in-out;
 }
 
 h1 {
@@ -139,25 +136,115 @@ p strong {
   font-weight: 700;
 }
 
-@-webkit-keyframes loaderFadeOut {
+.cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+  stroke-linecap: round;
+}
+
+.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 62px;
+}
+
+.cls-2 {
+  stroke: #ccc;
+}
+
+.cls-3, .cls-6 {
+  stroke: #ededed;
+}
+
+.cls-7 {
+  fill: #ccc;
+}
+
+@-webkit-keyframes fullLoaderFadeOut {
   0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
   100% {
+    opacity: 0;
     -webkit-transform: scale(0);
             transform: scale(0);
   }
 }
 
-@keyframes loaderFadeOut {
+@keyframes fullLoaderFadeOut {
   0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
   100% {
+    opacity: 0;
     -webkit-transform: scale(0);
             transform: scale(0);
+  }
+}
+@-webkit-keyframes loaderFadeIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes loaderFadeIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
   }
 }
 .loader {
@@ -173,12 +260,12 @@ p strong {
           animation-duration: 0.5s; /* durée de l'animation */
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out; /* type de easing */
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s; /* durée avant le déclenchement */
+  -webkit-animation-delay: 5.2s;
+          animation-delay: 5.2s; /* durée avant le déclenchement */
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
-  -webkit-animation-name: loaderFadeOut;
-          animation-name: loaderFadeOut; /* appel keyframes */
+  -webkit-animation-name: fullLoaderFadeOut;
+          animation-name: fullLoaderFadeOut; /* appel keyframes */
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
 }
@@ -191,6 +278,238 @@ p strong {
   top: 50%;
   margin-left: -30%;
   margin-top: -20%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s; /* durée de l'animation */
+  -webkit-animation-timing-function: cubic-bezier(0.54, -0.01, 0.27, 1.5);
+          animation-timing-function: cubic-bezier(0.54, -0.01, 0.27, 1.5); /* type de easing */
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /* durée avant le déclenchement */
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
+  -webkit-animation-name: loaderFadeIn;
+          animation-name: loaderFadeIn; /* appel keyframes */
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
+}
+
+@-webkit-keyframes loadGroupFadeIn {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    opacity: 1;
+  }
+}
+
+@keyframes loadGroupFadeIn {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    opacity: 1;
+  }
+}
+#load_1_group,
+#load_2_group,
+#load_3_group {
+  opacity: 0;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s; /* durée de l'animation */
+  -webkit-animation-timing-function: cubic-bezier(0.54, -0.01, 0.27, 1.5);
+          animation-timing-function: cubic-bezier(0.54, -0.01, 0.27, 1.5); /* type de easing */
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
+  -webkit-animation-name: loadGroupFadeIn;
+          animation-name: loadGroupFadeIn; /* appel keyframes */
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
+}
+
+#load_1_group {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; /* durée avant le déclenchement */
+}
+
+#load_2_group {
+  -webkit-animation-delay: 0.65s;
+          animation-delay: 0.65s; /* durée avant le déclenchement */
+}
+
+#load_3_group {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s; /* durée avant le déclenchement */
+}
+
+@-webkit-keyframes forkKnife {
+  0% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    opacity: 1;
+  }
+}
+
+@keyframes forkKnife {
+  0% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    opacity: 1;
+  }
+}
+#fork_knife {
+  display: block;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  opacity: 0;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s; /* durée de l'animation */
+  -webkit-animation-timing-function: cubic-bezier(0.54, -0.01, 0.27, 1.5);
+          animation-timing-function: cubic-bezier(0.54, -0.01, 0.27, 1.5); /* type de easing */
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s; /* durée avant le déclenchement */
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
+  -webkit-animation-name: forkKnife;
+          animation-name: forkKnife; /* appel keyframes */
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
+}
+
+@-webkit-keyframes loadersFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loadersFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#load_1_groupspin_opacity {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s; /* durée de l'animation */
+  -webkit-animation-timing-function: cubic-bezier(0.54, -0.01, 0.27, 1.5);
+          animation-timing-function: cubic-bezier(0.54, -0.01, 0.27, 1.5); /* type de easing */
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
+  -webkit-animation-name: loadersFadeIn;
+          animation-name: loadersFadeIn; /* appel keyframes */
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#load_1 {
+  stroke: #99E2D0;
+}
+
+#load_2 {
+  stroke: #9356DC;
+}
+
+#load_3 {
+  stroke: #FF79DA;
+}
+
+@-webkit-keyframes loadersSpin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes loadersSpin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+#load_1_groupspin,
+#load_2_groupspin,
+#load_3_groupspin {
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /* type de easing */
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /* nombre de fois où l'animation est jouée */
+  -webkit-animation-name: loadersSpin;
+          animation-name: loadersSpin; /* appel keyframes */
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+#load_1_groupspin {
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+}
+
+#load_2_groupspin {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+#load_3_groupspin {
+  -webkit-animation-duration: 3.4s;
+          animation-duration: 3.4s;
 }
 
 @media only screen and (min-width: 768px) {
@@ -227,8 +546,8 @@ p strong {
 }
 .main_header__branding .return a {
   color: #353535;
-  -webkit-transition: 0.2s color ease-in-out;
-  transition: 0.2s color ease-in-out;
+  -webkit-transition: 0.25s color ease-in-out;
+  transition: 0.25s color ease-in-out;
 }
 .main_header__branding .return a i {
   font-size: 28px;
@@ -236,8 +555,8 @@ p strong {
 }
 .main_header__branding .return a:hover {
   color: #9356DC;
-  -webkit-transition: 0.2s color ease-in-out;
-  transition: 0.2s color ease-in-out;
+  -webkit-transition: 0.25s color ease-in-out;
+  transition: 0.25s color ease-in-out;
 }
 .main_header__branding img {
   height: auto;
@@ -400,8 +719,8 @@ p strong {
   position: relative;
   -webkit-box-shadow: 0 5px 15px #ccc;
           box-shadow: 0 5px 15px #ccc;
-  -webkit-transition: 0.2s background-color ease-in-out;
-  transition: 0.2s background-color ease-in-out;
+  -webkit-transition: 0.25s background-color ease-in-out;
+  transition: 0.25s background-color ease-in-out;
   cursor: pointer;
 }
 .welcome_home__howtoitem__box__numb {
@@ -425,18 +744,18 @@ p strong {
 .welcome_home__howtoitem__box i {
   color: #7e7e7e;
   margin-right: 18px;
-  -webkit-transition: 0.2s color ease-in-out;
-  transition: 0.2s color ease-in-out;
+  -webkit-transition: 0.25s color ease-in-out;
+  transition: 0.25s color ease-in-out;
 }
 .welcome_home__howtoitem__box:hover {
   background-color: #f2eafb;
-  -webkit-transition: 0.2s background-color ease-in-out;
-  transition: 0.2s background-color ease-in-out;
+  -webkit-transition: 0.25s background-color ease-in-out;
+  transition: 0.25s background-color ease-in-out;
 }
 .welcome_home__howtoitem__box:hover i {
   color: #9356DC;
-  -webkit-transition: 0.2s color ease-in-out;
-  transition: 0.2s color ease-in-out;
+  -webkit-transition: 0.25s color ease-in-out;
+  transition: 0.25s color ease-in-out;
 }
 
 @media only screen and (min-width: 768px) {
@@ -514,23 +833,23 @@ p strong {
   -webkit-box-shadow: 0 0 10px #ccc;
           box-shadow: 0 0 10px #ccc;
   display: block;
-  -webkit-transition: 0.2s -webkit-box-shadow ease-in-out;
-  transition: 0.2s -webkit-box-shadow ease-in-out;
-  transition: 0.2s box-shadow ease-in-out;
-  transition: 0.2s box-shadow ease-in-out, 0.2s -webkit-box-shadow ease-in-out;
+  -webkit-transition: 0.25s -webkit-box-shadow ease-in-out;
+  transition: 0.25s -webkit-box-shadow ease-in-out;
+  transition: 0.25s box-shadow ease-in-out;
+  transition: 0.25s box-shadow ease-in-out, 0.25s -webkit-box-shadow ease-in-out;
 }
 .restaurant a:hover {
   -webkit-box-shadow: 0 0 20px #777;
           box-shadow: 0 0 20px #777;
-  -webkit-transition: 0.2s -webkit-box-shadow ease-in-out;
-  transition: 0.2s -webkit-box-shadow ease-in-out;
-  transition: 0.2s box-shadow ease-in-out;
-  transition: 0.2s box-shadow ease-in-out, 0.2s -webkit-box-shadow ease-in-out;
+  -webkit-transition: 0.25s -webkit-box-shadow ease-in-out;
+  transition: 0.25s -webkit-box-shadow ease-in-out;
+  transition: 0.25s box-shadow ease-in-out;
+  transition: 0.25s box-shadow ease-in-out, 0.25s -webkit-box-shadow ease-in-out;
 }
 .restaurant a:hover .restaurant__name {
   color: #9356DC;
-  -webkit-transition: 0.2s color ease-in-out;
-  transition: 0.2s color ease-in-out;
+  -webkit-transition: 0.25s color ease-in-out;
+  transition: 0.25s color ease-in-out;
 }
 .restaurant__img {
   border-radius: 12px 12px 0 0;
@@ -553,8 +872,8 @@ p strong {
   font-size: 18px;
   line-height: 1.6;
   font-weight: 700;
-  -webkit-transition: 0.2s color ease-in-out;
-  transition: 0.2s color ease-in-out;
+  -webkit-transition: 0.25s color ease-in-out;
+  transition: 0.25s color ease-in-out;
 }
 .restaurant__location {
   font-size: 18px;
@@ -596,24 +915,24 @@ p strong {
 .like .like_plain {
   fill: url(#like-gradient);
   opacity: 0;
-  -webkit-transition: 0.2s opacity ease-in-out;
-  transition: 0.2s opacity ease-in-out;
+  -webkit-transition: 0.25s opacity ease-in-out;
+  transition: 0.25s opacity ease-in-out;
 }
 .like .like_outline {
   fill: #000;
   opacity: 1;
-  -webkit-transition: 0.2s opacity ease-in-out;
-  transition: 0.2s opacity ease-in-out;
+  -webkit-transition: 0.25s opacity ease-in-out;
+  transition: 0.25s opacity ease-in-out;
 }
 .like:hover .like_outline {
   opacity: 0;
-  -webkit-transition: 0.2s opacity ease-in-out;
-  transition: 0.2s opacity ease-in-out;
+  -webkit-transition: 0.25s opacity ease-in-out;
+  transition: 0.25s opacity ease-in-out;
 }
 .like:hover .like_plain {
   opacity: 1;
-  -webkit-transition: 0.2s opacity ease-in-out;
-  transition: 0.2s opacity ease-in-out;
+  -webkit-transition: 0.25s opacity ease-in-out;
+  transition: 0.25s opacity ease-in-out;
 }
 
 @media only screen and (min-width: 768px) {
@@ -665,6 +984,7 @@ p strong {
   display: block;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 .menu_restaurant__box:last-child {
   margin-bottom: 0;

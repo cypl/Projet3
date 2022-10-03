@@ -33,9 +33,9 @@
         cursor:pointer;
         position: relative;
         overflow:hidden;
-        &:last-child{
-            margin-bottom:0;
-        }
+        // &:last-child{
+        //     margin-bottom:0;
+        // }
         &__content{
             width:100%;
             display: block;
@@ -160,4 +160,59 @@
             }
         }
     }
+}
+
+
+
+
+// Animation des plats dans le menu
+@keyframes showPlate {
+    0% {
+        opacity:0;
+        transform:translateY(-10px);
+    }
+    100% {
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+// Animation sur l'affichage des plats
+// 1 - on assigne les valeurs qui précède l'animation, il y a 3 groupes à animer
+.menu_restaurant__group--starters .menu_restaurant__box,
+.menu_restaurant__group--meals .menu_restaurant__box,
+.menu_restaurant__group--desserts .menu_restaurant__box{
+    opacity:0;
+    transform:translateY(-10px);
+}
+// 2 - on crée plusieurs valeurs de delay, qui seront utilisées pour chacune des incrémentations, dans chacun des 3 groupes
+$delay1: 0s; // cet élément ne compte pas pour nth-child, pourquoi ?
+$delay2: 0.5s;
+$delay3: 0.7s;
+$delay4: 0.9s;
+$intervalGroup: $delay4 - $delay2; // Cette valeur va servir à passer d'un groupe à l'autre, pour additionner les delays de chaque groupe
+$i: 1;
+// 3 - on crée une boucle, qui pour chaque valeur de delay, va incrémenter de +1 la valeur de nth-child, afin de pouvoir attribuer à chacun de ces éléments un delay différents, pour qu'ils s'affichent les uns après les autres.
+@each $delay in $delay1, $delay2, $delay3, $delay4 {
+    .menu_restaurant__group--starters .menu_restaurant__box:nth-child(#{$i}), 
+    .menu_restaurant__group--meals .menu_restaurant__box:nth-child(#{$i}),
+    .menu_restaurant__group--desserts .menu_restaurant__box:nth-child(#{$i}){
+        animation:showPlate; /* appel keyframes */
+        animation-duration: 0.35s; /* durée de l'animation */
+        animation-timing-function: ease-out; /* type de easing */
+        animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
+        animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
+    }
+    // 4 - le premier groupe apparaît avec la valeur des délais tel quel
+    .menu_restaurant__group--starters .menu_restaurant__box:nth-child(#{$i}){
+        animation-delay: $delay; /* la durée avant le déclenchement */
+    }
+    // 5 - le deuxième groupe apparaît avec la valeur des délais + l'intervalle des délais du premier groupe
+    .menu_restaurant__group--meals .menu_restaurant__box:nth-child(#{$i}){
+        animation-delay: $delay + $intervalGroup; /* la durée avant le déclenchement */
+    }
+    // 6 - le troisième groupe apparaît avec la valeur des délais + l'intervalle des délais du premier groupe et du deuxième
+    .menu_restaurant__group--desserts .menu_restaurant__box:nth-child(#{$i}){
+        animation-delay: $delay + $intervalGroup + $intervalGroup; /* la durée avant le déclenchement */
+    }
+    $i: $i + 1;
 }

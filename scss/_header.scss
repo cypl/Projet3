@@ -20,14 +20,19 @@
             margin-top:-14px;
             a{
                 color:$grey;
-                transition:$tspeed color ease-in-out;
                 i{
                     font-size:28px;
                     line-height: 1;
                 }
                 &:hover{
-                    color:$primaryColor;
-                    transition:$tspeed color ease-in-out;
+                    i{
+                        animation-duration: 0.6s; /* durée de l'animation */
+                        animation-timing-function: ease-out; /* type de easing */
+                        animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
+                        animation-name: returnHome; /* appel keyframes */
+                        animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
+                        animation-delay: 0;
+                    }
                 }
             }
             
@@ -52,6 +57,22 @@
         }
     }
 }
+
+@keyframes returnHome {
+    0% {
+        transform:translateX(0px);
+        color:$primaryColor;
+    }
+    50% {
+        transform:translateX(-10px);
+        color:$secondaryColor;
+    }
+    100% {
+        transform:translateX(0px);
+        color:$primaryColor;
+    }
+}
+
 
 // Vue tablette + desktop
 @media only screen and (min-width: 768px) {

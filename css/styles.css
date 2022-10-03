@@ -546,17 +546,24 @@ p strong {
 }
 .main_header__branding .return a {
   color: #353535;
-  -webkit-transition: 0.25s color ease-in-out;
-  transition: 0.25s color ease-in-out;
 }
 .main_header__branding .return a i {
   font-size: 28px;
   line-height: 1;
 }
-.main_header__branding .return a:hover {
-  color: #9356DC;
-  -webkit-transition: 0.25s color ease-in-out;
-  transition: 0.25s color ease-in-out;
+.main_header__branding .return a:hover i {
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; /* durée de l'animation */
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out; /* type de easing */
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
+  -webkit-animation-name: returnHome;
+          animation-name: returnHome; /* appel keyframes */
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
 }
 .main_header__branding img {
   height: auto;
@@ -578,6 +585,41 @@ p strong {
   margin-right: 10px;
 }
 
+@-webkit-keyframes returnHome {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    color: #9356DC;
+  }
+  50% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    color: #FF79DA;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    color: #9356DC;
+  }
+}
+
+@keyframes returnHome {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    color: #9356DC;
+  }
+  50% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    color: #FF79DA;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    color: #9356DC;
+  }
+}
 @media only screen and (min-width: 768px) {
   .main_header__branding {
     width: 90%;
@@ -902,6 +944,53 @@ p strong {
   z-index: 1;
 }
 
+@-webkit-keyframes likePlainOut {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  99% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes likePlainOut {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  99% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
 .like {
   display: block;
   position: absolute;
@@ -910,6 +999,7 @@ p strong {
   top: 50%;
   margin-top: -13px;
   right: 25px;
+  overflow: visible;
   cursor: pointer;
 }
 .like .like_plain {
@@ -925,6 +1015,14 @@ p strong {
   -webkit-transition: 0.25s opacity ease-in-out;
   transition: 0.25s opacity ease-in-out;
 }
+.like .like_plain_out {
+  fill: #FF79DA;
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
 .like:hover .like_outline {
   opacity: 0;
   -webkit-transition: 0.25s opacity ease-in-out;
@@ -934,6 +1032,20 @@ p strong {
   opacity: 1;
   -webkit-transition: 0.25s opacity ease-in-out;
   transition: 0.25s opacity ease-in-out;
+}
+.like:hover .like_plain_out {
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; /* durée de l'animation */
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out; /* type de easing */
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
+  -webkit-animation-name: likePlainOut;
+          animation-name: likePlainOut; /* appel keyframes */
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
 }
 
 @media only screen and (min-width: 768px) {

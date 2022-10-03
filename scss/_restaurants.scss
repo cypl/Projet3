@@ -81,6 +81,25 @@
         z-index: 1;
     }
 }
+
+// Objet coeur
+@keyframes likePlainOut {
+    0% {
+        transform: scale(1);
+        opacity:0.5;
+        transform-origin: center;
+    }
+    99% {
+        transform: scale(2);
+        opacity:0;
+        transform-origin: center;
+    }
+    100% {
+        transform: scale(1);
+        opacity:0;
+        transform-origin: center;
+    }
+}
 .like{
     display: block;
     position: absolute;
@@ -89,9 +108,10 @@
     top:50%;
     margin-top:-13px;
     right:25px;
+    overflow:visible;
     cursor:pointer;
     .like_plain {
-        fill:url(#like-gradient);
+        fill:url(#like-gradient); // ce dégradé est un objet SVG qui se trouve dans le footer des fichiers HTML
         opacity:0;
         transition:$tspeed opacity ease-in-out;
         position: relative;
@@ -101,6 +121,12 @@
         opacity:1;
         transition:$tspeed opacity ease-in-out;
     }
+    .like_plain_out{
+        fill:$secondaryColor;
+        opacity:0;
+        transform:scale(1);
+        transform-origin: center center;
+    }
     &:hover .like_outline{
         opacity:0;
         transition:$tspeed opacity ease-in-out;
@@ -108,6 +134,14 @@
     &:hover .like_plain{
         opacity:1;
         transition:$tspeed opacity ease-in-out;
+    }
+    &:hover .like_plain_out{
+        animation-duration: 0.6s; /* durée de l'animation */
+        animation-timing-function: ease-out; /* type de easing */
+        animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
+        animation-name: likePlainOut; /* appel keyframes */
+        animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
+        animation-delay: $tspeed;
     }
     }
 

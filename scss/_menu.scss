@@ -78,6 +78,9 @@
         }
         &__checked{
             height: 100%;
+            width:60px;
+            transform:scaleX(0);
+            transform-origin: center right;
             background-color:$tertiaryColor;
             border-radius: 0 $radius $radius 0;
             right: 0;
@@ -86,8 +89,7 @@
             display:flex;
             justify-content:center;
             align-items: center;
-            width: 0px;
-            transition: $tspeedCheckbox width $tEaseCheckbox;
+            transition: $tspeedCheckbox transform $tEaseCheckbox;
             i{
                 color:#fff;
                 font-size:25px;
@@ -108,8 +110,8 @@
                 transition: $tspeedCheckbox width $tEaseCheckbox;
             }
             .menu_restaurant__box__checked{
-                width:60px;
-                transition: $tspeedCheckbox width $tEaseCheckbox;
+                transform:scaleX(1);
+                transition: $tspeedCheckbox transform $tEaseCheckbox;
                 i {
                     transform:rotate(0deg);
                     opacity:1;

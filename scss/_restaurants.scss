@@ -94,6 +94,7 @@
         fill:url(#like-gradient);
         opacity:0;
         transition:$tspeed opacity ease-in-out;
+        position: relative;
     }
     .like_outline {
         fill:#000;

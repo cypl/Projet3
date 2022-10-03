@@ -193,7 +193,7 @@
 #load_1_groupspin,
 #load_2_groupspin,
 #load_3_groupspin{
-    animation-timing-function: linear; /* type de easing */
+    animation-timing-function: ease-in; /* type de easing */
     animation-iteration-count: infinite; /* nombre de fois où l'animation est jouée */
     animation-name: loadersSpin; /* appel keyframes */
     animation-delay: 0.6s;

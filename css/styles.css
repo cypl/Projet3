@@ -487,8 +487,8 @@ p strong {
 #load_1_groupspin,
 #load_2_groupspin,
 #load_3_groupspin {
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear; /* type de easing */
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in; /* type de easing */
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite; /* nombre de fois où l'animation est jouée */
   -webkit-animation-name: loadersSpin;
@@ -917,6 +917,7 @@ p strong {
   opacity: 0;
   -webkit-transition: 0.25s opacity ease-in-out;
   transition: 0.25s opacity ease-in-out;
+  position: relative;
 }
 .like .like_outline {
   fill: #000;
@@ -1034,6 +1035,11 @@ p strong {
 }
 .menu_restaurant__box__checked {
   height: 100%;
+  width: 60px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
   background-color: #99E2D0;
   border-radius: 0 12px 12px 0;
   right: 0;
@@ -1048,9 +1054,10 @@ p strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 0px;
-  -webkit-transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
-  transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  -webkit-transition: 0.4s -webkit-transform cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  transition: 0.4s -webkit-transform cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  transition: 0.4s transform cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  transition: 0.4s transform cubic-bezier(0.64, -0.45, 0.35, 1.38), 0.4s -webkit-transform cubic-bezier(0.64, -0.45, 0.35, 1.38);
 }
 .menu_restaurant__box__checked i {
   color: #fff;
@@ -1076,9 +1083,12 @@ p strong {
   transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
 }
 .menu_restaurant__box:hover .menu_restaurant__box__checked {
-  width: 60px;
-  -webkit-transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
-  transition: 0.4s width cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: 0.4s -webkit-transform cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  transition: 0.4s -webkit-transform cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  transition: 0.4s transform cubic-bezier(0.64, -0.45, 0.35, 1.38);
+  transition: 0.4s transform cubic-bezier(0.64, -0.45, 0.35, 1.38), 0.4s -webkit-transform cubic-bezier(0.64, -0.45, 0.35, 1.38);
 }
 .menu_restaurant__box:hover .menu_restaurant__box__checked i {
   -webkit-transform: rotate(0deg);

@@ -1,3 +1,19 @@
+// Animation sur le bouton de retour, sur les pages menu.
+@keyframes returnHome {
+    0% {
+        transform:translateX(0px);
+        color:$primaryColor;
+    }
+    50% {
+        transform:translateX(-10px);
+        color:$secondaryColor;
+    }
+    100% {
+        transform:translateX(0px);
+        color:$primaryColor;
+    }
+}
+
 .main_header{
     background-color: #fff;
     &__wrapper{
@@ -57,22 +73,6 @@
         }
     }
 }
-
-@keyframes returnHome {
-    0% {
-        transform:translateX(0px);
-        color:$primaryColor;
-    }
-    50% {
-        transform:translateX(-10px);
-        color:$secondaryColor;
-    }
-    100% {
-        transform:translateX(0px);
-        color:$primaryColor;
-    }
-}
-
 
 // Vue tablette + desktop
 @media only screen and (min-width: 768px) {

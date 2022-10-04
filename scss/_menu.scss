@@ -189,7 +189,6 @@ $delay3: 0.9s;
 $intervalGroup: $delay3 - $delay1; // Cette valeur va servir à passer d'un groupe à l'autre, pour additionner les delays de chaque groupe
 $i: 1;
 // 3 - on crée une boucle, qui pour chaque valeur de delay, va incrémenter de +1 la valeur de nth-child, afin de pouvoir attribuer à chacun de ces éléments un delay différents, pour qu'ils s'affichent les uns après les autres.
-//@each $delay in $delay1, $delay2, $delay3, $delay4 {
 @each $delay in $delay1, $delay2, $delay3 {
     .menu_restaurant__group--starters .menu_restaurant__anim .menu_restaurant__box:nth-child(#{$i}), 
     .menu_restaurant__group--meals .menu_restaurant__anim .menu_restaurant__box:nth-child(#{$i}),

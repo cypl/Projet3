@@ -48,8 +48,9 @@ img {
 .cta {
   text-align: center;
   line-height: 1;
+  width: 100%;
 }
-.cta a {
+.cta a, .cta button {
   display: inline-block;
   color: #fff;
   padding: 17px 22px;
@@ -61,12 +62,14 @@ img {
   position: relative;
   overflow: hidden;
   z-index: 100;
+  border: none;
+  cursor: pointer;
   -webkit-transition: 0.25s -webkit-box-shadow ease-in-out;
   transition: 0.25s -webkit-box-shadow ease-in-out;
   transition: 0.25s box-shadow ease-in-out;
   transition: 0.25s box-shadow ease-in-out, 0.25s -webkit-box-shadow ease-in-out;
 }
-.cta a:after {
+.cta a:after, .cta button:after {
   content: "";
   position: absolute;
   display: block;
@@ -81,7 +84,7 @@ img {
   -webkit-transition: 0.25s opacity ease-in-out, 0.25s background-color ease-in-out;
   transition: 0.25s opacity ease-in-out, 0.25s background-color ease-in-out;
 }
-.cta a:hover {
+.cta a:hover, .cta button:hover {
   -webkit-box-shadow: 0 5px 10px #aaa;
           box-shadow: 0 5px 10px #aaa;
   -webkit-transition: 0.25s -webkit-box-shadow ease-in-out;
@@ -89,7 +92,7 @@ img {
   transition: 0.25s box-shadow ease-in-out;
   transition: 0.25s box-shadow ease-in-out, 0.25s -webkit-box-shadow ease-in-out;
 }
-.cta a:hover:after {
+.cta a:hover:after, .cta button:hover:after {
   opacity: 1;
   -webkit-transition: 0.25s opacity ease-in-out, 0.25s background-color ease-in-out;
   transition: 0.25s opacity ease-in-out, 0.25s background-color ease-in-out;

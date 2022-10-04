@@ -47,7 +47,8 @@ img {
 .cta{
     text-align:center;
     line-height:1;
-    a{
+    width:100%;
+    a, button{
         display:inline-block;
         color:#fff;
         padding:17px 22px;
@@ -57,6 +58,8 @@ img {
         position: relative;
         overflow:hidden;
         z-index:100;
+        border:none;
+        cursor:pointer;
         transition: $tspeed box-shadow ease-in-out;
         &:after{
             content: '';

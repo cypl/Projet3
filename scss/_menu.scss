@@ -175,14 +175,9 @@
     }
 }
 // Animation sur l'affichage des plats
-// 1 - on assigne les valeurs qui précède l'animation, il y a 3 groupes à animer
-.menu_restaurant__box{
-    opacity:0;
-    transform:translateY(-10px);
-}
-// 2 - on donne une valeur au délai initial (celui qui va être incrémenter)
+// 1 - on donne une valeur au délai initial (celui qui va être incrémenter)
 $delay : 0.5;
-// 3 - on crée une double boucle qui va chercher chacun des plats de chacune des colonnes
+// 2 - on crée une double boucle qui va chercher chacun des plats de chacune des colonnes
 @for $i from 1 through 3 { // = pour chacune des 3 colonnes (entrées + plats + desserts)
     @for $j from 1 through 4 { // = pour chacun des plats, de chacune des colonnes (parfois il y a 4 plats)
         .menu_restaurant__group__form .menu_restaurant__group:nth-child(#{$i}) .menu_restaurant__box:nth-child(#{$j}){
@@ -190,16 +185,9 @@ $delay : 0.5;
             animation-duration: 0.35s; /* durée de l'animation */
             animation-timing-function: ease-out; /* type de easing */
             animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
-            animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
+            animation-fill-mode: both; /* "both" permet d'afficher l'animation depuis l'état 0% de la keyframe, jusqu'à l'état 100%, sans avoir besoin de préciserles propriétés CSS en dehors de la keyframe */
             animation-delay: #{$delay}s ; /* le delay est incréménter de O.2 pour chaque nouvel élément */
         }
         $delay : $delay + 0.2; // le délai est incrémenté de 0.2s à chaque itération de la boucle
     }
 }
-
-
-
-
-
-
-

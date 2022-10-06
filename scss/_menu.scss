@@ -39,11 +39,11 @@
         &__content{
             width:100%;
             display: block;
+            transition: $tspeedCheckbox width $tEaseCheckbox;
             //conteneur qui change de largeur au survol de la box
             &__plate{
                 display: block;
                 width:100%;
-                transition: $tspeedCheckbox width $tEaseCheckbox;
                 font-size:18px;
                 font-weight: 700;
                 overflow:hidden; 
@@ -54,7 +54,6 @@
             //conteneur qui change de largeur au survol de la box
             &__infos{
                 width:100%;
-                transition: $tspeedCheckbox width $tEaseCheckbox;
                 display:flex;
                 justify-content:space-between;
                 &__desc{
@@ -101,11 +100,7 @@
         }
         // Styles et animations au survol de la box
         &:hover{
-            .menu_restaurant__box__content__plate{
-                width:calc(100% - 65px);
-                transition: $tspeedCheckbox width $tEaseCheckbox;
-            }
-            .menu_restaurant__box__content__infos{
+            .menu_restaurant__box__content{
                 width:calc(100% - 65px);
                 transition: $tspeedCheckbox width $tEaseCheckbox;
             }
@@ -119,7 +114,6 @@
                     transition-delay: 300ms, 200ms;
                 }
             }
-            
         }
         
     } 

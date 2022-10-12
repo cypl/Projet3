@@ -47,7 +47,6 @@
                         animation-iteration-count: 1; /* nombre de fois où l'animation est jouée */
                         animation-name: returnHome; /* appel keyframes */
                         animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
-                        animation-delay: 0;
                     }
                 }
             }

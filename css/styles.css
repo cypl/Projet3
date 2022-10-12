@@ -599,8 +599,6 @@ p strong {
           animation-name: returnHome; /* appel keyframes */
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; /* empêcher l'animation de revenir au début lorsqu'elle a joué une fois */
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
 }
 .main_header__branding img {
   height: auto;
